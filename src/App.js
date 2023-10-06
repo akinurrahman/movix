@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react'
+import {fetchDataFromApi} from './utils/api'
+import { useDispatch, useSelector } from 'react-redux'
+import { getApiConfiguration } from './redux/slices/homeSlice'
+const App = () => {
+const dispatch = useDispatch()
+const {url} = useSelector(state=> state.home)
+console.log(url)
+  useEffect(()=>{
+    apiTesting()
+  },[])
 
-function App() {
+  const apiTesting =()=>{
+    fetchDataFromApi('/movie/popular')
+    .then((res)=>{
+      // console.log(res)
+      dispatch(getApiConfiguration(res))
+    })
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{color: "red"}}>
+      {url?.total_pages}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
