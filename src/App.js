@@ -19,16 +19,16 @@ const App = () => {
   }, []);
 
   const fetchApiConfig = () => {
-    fetchDataFromApi("/movie/popular").then((res) => {
-      // console.log("app comp" , res);
+    fetchDataFromApi("/configuration").then((res) => {
+      // console.log("app comp" , res );
 
-      // const url = {
-      // backdrop: res.images.secure_base_url + "original",
-      // poster: res.images.secure_base_url + "original",
-      // profile: res.images.secure_base_url + "original",
-      // };
+      const url = {
+      backdrop: res.images.secure_base_url + "original",
+      poster: res.images.secure_base_url + "original",
+      profile: res.images.secure_base_url + "original",
+      };
 
-      dispatch(getApiConfiguration(res));
+      dispatch(getApiConfiguration(url));
     });
   };
   return (
