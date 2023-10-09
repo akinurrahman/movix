@@ -7,15 +7,15 @@ const Banner = () => {
   const nevigate = useNavigate();
 
   const { data, loading } = useFetch("/movie/popular");
-console.log(data)
-  // useEffect(() => {
-  //   if (data && data.results) {
-  //     const bg =
-  //       data.results[Math.floor(Math.random() * data.results.length)]
-  //         .backdrop_path;
-  //     setBackground(bg);
-  //   }
-  // }, [data]);
+  // console.log("banner comp", background);
+  useEffect(() => {
+    if (data && data.results) {
+      const bg =
+        data.results[Math.floor(Math.random() * data.results.length)]
+          .backdrop_path;
+      setBackground(bg);
+    }
+  }, [data]);
 
   const searchQueryHandler = (e) => {
     if (e.key === "Enter" && query.length > 0) {

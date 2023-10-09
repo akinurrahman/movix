@@ -8,20 +8,26 @@ import Details from "./pages/details/Details";
 import SearchResult from "./pages/search results/SeachReasults";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/404/PageNotFound";
-import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   const dispatch = useDispatch();
   const { url } = useSelector((state) => state.home);
-  // console.log(url);
   useEffect(() => {
-    apiTesting();
+    fetchApiConfig();
   }, []);
 
-  const apiTesting = () => {
+  const fetchApiConfig = () => {
     fetchDataFromApi("/movie/popular").then((res) => {
-      // console.log(res)
+      // console.log("app comp" , res);
+
+      // const url = {
+      // backdrop: res.images.secure_base_url + "original",
+      // poster: res.images.secure_base_url + "original",
+      // profile: res.images.secure_base_url + "original",
+      // };
+
       dispatch(getApiConfiguration(res));
     });
   };
