@@ -5,7 +5,6 @@ import useFetch from "../../../hooks/useFetch";
 import { useSelector } from "react-redux";
 import Img from "../../../components/lazy load image/Img";
 import ContentWrapper from "../../../components/content wrapper/ContentWrapper";
-
 const Banner = () => {
   const [background, setBackground] = useState("");
   const [query, setQuery] = useState("");
@@ -40,7 +39,7 @@ const Banner = () => {
       <div className="opacity-layer"></div>
 
       <ContentWrapper>
-        <div className="heroBannerControl">
+        <div className="heroBannerContent">
           <span className="title">Welcome</span>
           <span className="subTitle">
             Millions of movies, TV shows and people to discover. Explore now
