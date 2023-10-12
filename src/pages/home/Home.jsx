@@ -10,9 +10,8 @@ const Home = () => {
     <div className="homePage">
       <Banner />
       <Trending />
-      <Popular/>
-      <TopRated/>
-      <div style={{ height: 1000 }}></div>
+      <Popular />
+      <TopRated />
     </div>
   );
 };
