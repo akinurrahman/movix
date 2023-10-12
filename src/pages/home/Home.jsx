@@ -3,6 +3,7 @@ import Banner from "./hero banner/Banner";
 import Trending from "./trending/Trending";
 import "./style.scss";
 import Popular from "./popular section/Popular";
+import TopRated from "./top rated section/TopRated";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Banner />
       <Trending />
       <Popular/>
+      <TopRated/>
       <div style={{ height: 1000 }}></div>
     </div>
   );
