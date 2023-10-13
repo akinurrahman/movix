@@ -10,7 +10,7 @@ import useFetch from "../../../hooks/useFetch";
 import Genres from "../../../components/genres/Genres";
 import CircleRating from "../../../components/circle rating/CircleRating";
 import Img from "../../../components/lazy load image/Img";
-// import { PlayIcon } from "../Playbtn";
+import PlayIcon from "../PlayButton";
 // import VideoPopup from "../../../components/videoPopup/VideoPopup";
 
 const Banner = ({ video, crew }) => {
@@ -76,7 +76,7 @@ const Banner = ({ video, crew }) => {
                           setVideoId(video.key);
                         }}
                       >
-                        {/* <PlayIcon /> */}
+                        <PlayIcon/>
                         <span className="text">Watch Trailer</span>
                       </div>
                     </div>
