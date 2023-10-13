@@ -11,7 +11,7 @@ import Genres from "../../../components/genres/Genres";
 import CircleRating from "../../../components/circle rating/CircleRating";
 import Img from "../../../components/lazy load image/Img";
 import PlayIcon from "../PlayButton";
-// import VideoPopup from "../../../components/videoPopup/VideoPopup";
+import VideoPopup from "../../../components/video popup/VideoPopup";
 
 const Banner = ({ video, crew }) => {
   const [show, setShow] = useState(false);
@@ -154,12 +154,12 @@ const Banner = ({ video, crew }) => {
                     )}
                   </div>
                 </div>
-                {/* <VideoPopup
+                <VideoPopup
                   show={show}
                   setShow={setShow}
                   videoId={videoId}
                   setVideoId={setVideoId}
-                /> */}
+                />
               </ContentWrapper>
             </React.Fragment>
           )}
