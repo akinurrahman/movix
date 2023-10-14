@@ -16,7 +16,7 @@ const App = () => {
 
   useEffect(() => {
     fetchApiConfig();
-    genresCall();
+    genresCall(); // eslint-disable-next-line
   }, []);
 
   const fetchApiConfig = () => {

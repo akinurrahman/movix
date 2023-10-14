@@ -38,7 +38,7 @@ const Header = () => {
         window.addEventListener("scroll", controlNavbar);
         return () => {
             window.removeEventListener("scroll", controlNavbar);
-        };
+        };     // eslint-disable-next-line
     }, [lastScrollY]);
 
     const searchQueryHandler = (event) => {

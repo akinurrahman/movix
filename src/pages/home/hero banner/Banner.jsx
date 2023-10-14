@@ -13,6 +13,7 @@ const Banner = () => {
   // console.log("banner comp", url.backdrop);
   const { data, loading } = useFetch("/movie/popular");
   useEffect(() => {
+    // eslint-disable-next-line
     if (data && data.results) {
       const bg =
         url.backdrop +
@@ -20,6 +21,7 @@ const Banner = () => {
           ?.backdrop_path;
       setBackground(bg);
     }
+    // eslint-disable-next-line
   }, [data]);
 
   const searchQueryHandler = (e) => {

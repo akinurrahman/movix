@@ -68,7 +68,7 @@ const Explore = () => {
         setPageNum(1);
         setSortby(null);
         setGenre(null);
-        fetchInitialData();
+        fetchInitialData(); // eslint-disable-next-line
     }, [mediaType]);
 
     const onChange = (selectedItems, action) => {
@@ -143,7 +143,7 @@ const Explore = () => {
                                 loader={<Spinner />}
                             >
                                 {data?.results?.map((item, index) => {
-                                    if (item.media_type === "person") return;
+                                    if (item.media_type === "person") return null;
                                     return (
                                         <MovieCard
                                             key={index}
