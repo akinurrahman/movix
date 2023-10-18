@@ -19,7 +19,7 @@ const Banner = ({ video, crew }) => {
 
   const { mediaType, id } = useParams();
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
-
+// console.log(" data is", data)
   const { url } = useSelector((state) => state.home);
 
   const _genres = data?.genres?.map((g) => g.id);
@@ -54,7 +54,10 @@ const Banner = ({ video, crew }) => {
                         src={url.backdrop + data.poster_path}
                       />
                     ) : (
-                      <Img className="posterImg" src={`/assets/no-poster.png`} />
+                      <Img
+                        className="posterImg"
+                        src={`/assets/no-poster.png`}
+                      />
                     )}
                   </div>
                   <div className="right">
@@ -76,7 +79,7 @@ const Banner = ({ video, crew }) => {
                           setVideoId(video.key);
                         }}
                       >
-                        <PlayIcon/>
+                        <PlayIcon />
                         <span className="text">Watch Trailer</span>
                       </div>
                     </div>
