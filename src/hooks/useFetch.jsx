@@ -9,7 +9,7 @@ const useFetch = (url) => {
     useEffect(() => {
         setLoading("loading...");
         setData(null);
-        setError(null);
+        setError(null); 
 
         fetchDataFromApi(url)
             .then((res) => {
