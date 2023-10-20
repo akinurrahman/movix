@@ -2,7 +2,7 @@
 
 ## EndPoints I have used in this project
 
-# BASE URL : https://api.themoviedb.org/3
+ BASE URL : https://api.themoviedb.org/3
 
 1.  /configuration
 2.  /${endpoint}/popular --> endpoint = movie/tv
