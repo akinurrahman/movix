@@ -38,7 +38,7 @@ const SearchResult = () => {
   };
 
   useEffect(() => {
-    fetchData(1); // Fetch the initial data
+    fetchData(1); // eslint-disable-next-line
   }, [query]);
 
   const fetchNextPageData = () => {
